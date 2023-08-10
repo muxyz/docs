@@ -13,4 +13,9 @@ Our main application (mu.app) then uses an <iframe> to load your content via our
 
 ## User authentication
 
-When you application is initially loaded, Mu will authenticate the user. This can be found my accessing via `mu.user.state.user`  
+All apps that are created from within the Mu application have access to logged in user. You can access the user via `mu.user`.
+
+Here you have two values:
+- `authenticated`: This is a boolean that is true once the server has finished authenticating the user.
+- `details`: This is the users details. If `details` is `undefined` and `authenticated` is true, this indicates the user is not loggedin
+  
