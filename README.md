@@ -1,4 +1,3 @@
- 
 # MU Docs
 
 Welcome to the MU documentation!
@@ -7,11 +6,11 @@ Here you will learn how to create an app using MU.app and what functionality is 
 
 ## How it works
 
-Creating an app with Mu is easy because an Mu app is just a tradional website. Just use HTML, JS and CSS and you're good to go. All code is rendered within the `<body>` tags of our renderer (which is just a server rendered HTML page).
+Creating an app with Mu is easy as pie because a Mu app is just a traditional website. Just use HTML, JS and CSS and you're good to go. All code is rendered within the `<body>` tags of our renderer (which is just a server rendered HTML page).
 
 > Note: If you want routing in your app, this can be done through a Single page application router like React Router or Vue Router etc.
 
-Our renderer has some functionality attached to the `window` via `window.mu` or `mu` which allows you to interact with the local server and also provides functionality out of the box including User Authentication via `mu.user`, Database storage via `mu.storage` and payments via `mu.payments`.
+Our renderer has some useful functionality attached to the `window` via `window.mu` or `mu` object. This allows you to interact with the local server and also provides User Authentication via `mu.user`, Database storage via `mu.storage` and payments via `mu.payments`.
 
 ## mu.user
 
@@ -19,11 +18,11 @@ All apps that are created from within the Mu application have access to logged i
 
 #### `authenticate()`
 
-Call this function to authenticate the user. This is usually run when your app is first loaded (only if you need your user to be authenticated within your application).
+Used to authenticate the user. Authenticate is usually run when your app is first rendered (only if you need your user to be authenticated within your application).
 
-#### `getUser: () => User` 
+#### `getUser: () => User | undefined`
 
-Call this function to get the currently logged in users details. This will return `undefined` if you haven't previously called authenticate or the user is not logged in.
+Call this function to get the currently logged in user. This will return `undefined` if you haven't previously called authenticate or the user is not logged in.
 
 Here is an example of the `User` interface:
 
@@ -44,4 +43,4 @@ Here is an example of the `User` interface:
 
 #### `authenticated`
 
-This will return a boolean as to whether the `authenticate` call has previously finished. This is helpful to test that the user is not logged in. 
+Returns a boolean as to whether the `authenticate` call has previously finished. This is helpful to test that the user is not logged in.
